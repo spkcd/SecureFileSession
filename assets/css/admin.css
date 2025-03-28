@@ -1,0 +1,667 @@
+/**
+ * Admin styles for Secure File Session plugin
+ * Modern UI Design
+ */
+
+:root {
+  --sfs-primary-color: #4361ee;
+  --sfs-secondary-color: #3f37c9;
+  --sfs-success-color: #4caf50;
+  --sfs-warning-color: #ff9800;
+  --sfs-danger-color: #f44336;
+  --sfs-light-color: #f8f9fa;
+  --sfs-dark-color: #212529;
+  --sfs-border-color: #e0e0e0;
+  --sfs-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --sfs-border-radius: 8px;
+  --sfs-transition: all 0.2s ease-in-out;
+}
+
+/* General Admin Styles */
+.secure-file-session-admin {
+    margin: 25px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.secure-file-session-admin h1 {
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: var(--sfs-dark-color);
+}
+
+/* Tab Navigation */
+.sfs-admin-tabs .nav-tab-wrapper {
+    margin-bottom: 25px;
+    border-bottom: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+.sfs-admin-tabs .nav-tab {
+    margin-left: 0;
+    margin-right: 5px;
+    border: none;
+    background-color: #f0f0f1;
+    color: var(--sfs-dark-color);
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: var(--sfs-border-radius);
+    transition: var(--sfs-transition);
+}
+
+.sfs-admin-tabs .nav-tab:hover {
+    background-color: #e0e0e0;
+}
+
+.sfs-admin-tabs .nav-tab-active,
+.sfs-admin-tabs .nav-tab-active:hover {
+    background-color: var(--sfs-primary-color);
+    color: white;
+}
+
+/* Tab Content */
+.sfs-admin-tabs .tab-content {
+    background: #fff;
+    border: 1px solid var(--sfs-border-color);
+    border-radius: var(--sfs-border-radius);
+    box-shadow: var(--sfs-shadow);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.sfs-admin-tabs .tab-pane {
+    display: none;
+}
+
+.sfs-admin-tabs .tab-pane.active {
+    display: block;
+}
+
+/* Form Styles */
+.secure-file-session-admin .form-table th {
+    width: 220px;
+    padding: 20px 10px 20px 0;
+}
+
+.secure-file-session-admin .form-table td {
+    padding: 20px 10px;
+}
+
+.secure-file-session-admin input[type="text"],
+.secure-file-session-admin input[type="number"],
+.secure-file-session-admin select,
+.secure-file-session-admin textarea {
+    border-radius: 4px;
+    border: 1px solid var(--sfs-border-color);
+    padding: 8px 12px;
+    box-shadow: none;
+    transition: var(--sfs-transition);
+}
+
+.secure-file-session-admin input[type="text"]:focus,
+.secure-file-session-admin input[type="number"]:focus,
+.secure-file-session-admin select:focus,
+.secure-file-session-admin textarea:focus {
+    border-color: var(--sfs-primary-color);
+    box-shadow: 0 0 0 1px var(--sfs-primary-color);
+}
+
+.secure-file-session-admin .button-primary {
+    background: var(--sfs-primary-color);
+    border-color: var(--sfs-secondary-color);
+    box-shadow: none;
+    text-shadow: none;
+    padding: 5px 20px;
+    height: auto;
+    line-height: 2;
+    border-radius: 4px;
+    transition: var(--sfs-transition);
+}
+
+.secure-file-session-admin .button-primary:hover {
+    background: var(--sfs-secondary-color);
+    border-color: var(--sfs-secondary-color);
+}
+
+/* Token Viewer Styles */
+.token-viewer {
+    margin-top: 20px;
+}
+
+.token-viewer table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid var(--sfs-border-color);
+    border-radius: var(--sfs-border-radius);
+    overflow: hidden;
+}
+
+.token-viewer th {
+    text-align: left;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid var(--sfs-border-color);
+    font-weight: 500;
+}
+
+.token-viewer td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--sfs-border-color);
+}
+
+.token-viewer tr:last-child td {
+    border-bottom: none;
+}
+
+.token-viewer .expired {
+    color: var(--sfs-danger-color);
+    font-weight: 500;
+}
+
+/* Log Viewer Styles */
+.log-viewer {
+    margin-top: 20px;
+}
+
+.log-viewer form {
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.log-viewer .clear-logs-by-age {
+    display: flex;
+    align-items: center;
+}
+
+.log-viewer .clear-logs-by-age label {
+    margin-right: 12px;
+}
+
+.log-viewer .clear-logs-by-age input {
+    margin: 0 5px;
+}
+
+.log-viewer table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid var(--sfs-border-color);
+    border-radius: var(--sfs-border-radius);
+    overflow: hidden;
+}
+
+.log-viewer th {
+    text-align: left;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid var(--sfs-border-color);
+    font-weight: 500;
+}
+
+.log-viewer td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--sfs-border-color);
+}
+
+.log-viewer tr:last-child td {
+    border-bottom: none;
+}
+
+.log-viewer .event-type {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.log-viewer .event-type.error {
+    background-color: #ffebee;
+    color: var(--sfs-danger-color);
+}
+
+.log-viewer .event-type.success {
+    background-color: #e8f5e9;
+    color: var(--sfs-success-color);
+}
+
+.log-viewer .event-type.normal {
+    background-color: #e3f2fd;
+    color: var(--sfs-primary-color);
+}
+
+.log-viewer .log-details {
+    margin: 5px 0 0;
+    padding-left: 20px;
+    font-size: 13px;
+    color: #666;
+}
+
+/* Debug Section Styles */
+.debug-section {
+    margin: 20px 0;
+}
+
+.debug-section h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.debug-section h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.debug-info {
+    background: var(--sfs-light-color);
+    border: 1px solid var(--sfs-border-color);
+    border-radius: var(--sfs-border-radius);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.session-debug, .settings-debug {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid var(--sfs-border-color);
+    border-radius: var(--sfs-border-radius);
+    overflow: auto;
+    white-space: pre;
+    max-height: 300px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13px;
+}
+
+.security-notice {
+    background-color: #fff8e1;
+    color: #ff6f00;
+    padding: 20px;
+    border-radius: var(--sfs-border-radius);
+    border-left: 4px solid var(--sfs-warning-color);
+    margin-top: 25px;
+    box-shadow: var(--sfs-shadow);
+}
+
+/* Notice Styling */
+.notice.inline {
+    margin: 20px 0;
+    border-radius: var(--sfs-border-radius);
+    padding: 12px 15px;
+}
+
+/* Tools Tab Styles */
+.sfs-tools-tab h2 {
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.sfs-panel {
+    background: #fff;
+    border: 1px solid var(--sfs-border-color);
+    border-radius: var(--sfs-border-radius);
+    box-shadow: var(--sfs-shadow);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.sfs-panel h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.sfs-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.sfs-tool-card {
+    border: 1px solid var(--sfs-border-color);
+    border-radius: var(--sfs-border-radius);
+    padding: 25px;
+    background: #fff;
+    transition: var(--sfs-transition);
+    box-shadow: var(--sfs-shadow);
+}
+
+.sfs-tool-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.sfs-tool-card h4 {
+    margin-top: 0;
+    border-bottom: 1px solid var(--sfs-border-color);
+    padding-bottom: 15px;
+    color: var(--sfs-dark-color);
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.sfs-tool-card p {
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.sfs-tool-card .button {
+    width: 100%;
+    text-align: center;
+    padding: 8px 12px;
+    height: auto;
+    background: #f8f9fa;
+    border-color: var(--sfs-border-color);
+    box-shadow: none;
+    border-radius: 4px;
+    transition: var(--sfs-transition);
+}
+
+.sfs-tool-card .button:hover {
+    background: #e9ecef;
+    border-color: #ced4da;
+}
+
+.sfs-tool-card .button-primary {
+    background: var(--sfs-primary-color);
+    border-color: var(--sfs-secondary-color);
+    color: white;
+}
+
+.sfs-tool-card .button-primary:hover {
+    background: var(--sfs-secondary-color);
+    border-color: var(--sfs-secondary-color);
+}
+
+/* Diagnostic Styles */
+.sfs-panel-diagnostic {
+    border-left: 4px solid var(--sfs-primary-color);
+}
+
+.sfs-diagnostic-items {
+    margin-top: 25px;
+}
+
+.sfs-diagnostic-item {
+    border: 1px solid var(--sfs-border-color);
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: var(--sfs-border-radius);
+    overflow: hidden;
+    box-shadow: var(--sfs-shadow);
+}
+
+.sfs-diagnostic-item-header {
+    background-color: #f8f9fa;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--sfs-border-color);
+    cursor: pointer;
+}
+
+.sfs-diagnostic-item-details {
+    padding: 15px;
+    border-top: 1px solid var(--sfs-border-color);
+}
+
+.sfs-diagnostic-name {
+    font-weight: 500;
+}
+
+.sfs-diagnostic-status-running {
+    color: #2196f3;
+    font-weight: 500;
+}
+
+.sfs-diagnostic-status-error {
+    color: var(--sfs-danger-color);
+    font-weight: 500;
+}
+
+.sfs-diagnostic-status-success {
+    color: var(--sfs-success-color);
+    font-weight: 500;
+}
+
+.sfs-diagnostic-summary-issues {
+    background-color: #ffebee;
+    border: 1px solid #ffcdd2;
+    color: var(--sfs-danger-color);
+    padding: 15px;
+    border-radius: var(--sfs-border-radius);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.sfs-diagnostic-summary-success {
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    color: var(--sfs-success-color);
+    padding: 15px;
+    border-radius: var(--sfs-border-radius);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.sfs-diagnostic-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.sfs-error {
+    color: var(--sfs-danger-color);
+    font-weight: 500;
+    padding: 10px;
+    background-color: #ffebee;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 782px) {
+    .secure-file-session-admin .form-table th {
+        padding-bottom: 5px;
+        width: 100%;
+    }
+    
+    .secure-file-session-admin .form-table td {
+        padding-top: 5px;
+    }
+    
+    .sfs-tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sfs-diagnostic-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .sfs-diagnostic-item-header span:last-child {
+        margin-top: 10px;
+    }
+}
+
+/* Additional Modern UI Styles for JavaScript Enhancements */
+
+/* Tab transition effects */
+.sfs-admin-tabs .tab-pane {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.sfs-admin-tabs .tab-pane.active {
+    opacity: 1;
+}
+
+/* Token expiration feedback */
+#expiration_feedback {
+    margin-left: 10px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 50px;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Saving button state */
+.button.saving {
+    background-image: url('../img/spinner.gif');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 16px 16px;
+    padding-left: 30px !important;
+    opacity: 0.8;
+}
+
+/* Collapsible diagnostic sections */
+.sfs-diagnostic-item-header {
+    position: relative;
+}
+
+.sfs-diagnostic-item-header:after {
+    content: "\f140";
+    font-family: dashicons;
+    position: absolute;
+    right: 15px;
+    color: #999;
+    transition: transform 0.2s ease;
+}
+
+.sfs-diagnostic-item-header.expanded:after {
+    transform: rotate(180deg);
+}
+
+/* Debug warning special styling */
+.debug-warning {
+    background-color: #ffe3e6;
+    border-left-color: #ff4d6a;
+    color: #c2113a;
+    margin: 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 77, 106, 0.4); }
+    70% { box-shadow: 0 0 0 5px rgba(255, 77, 106, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 77, 106, 0); }
+}
+
+/* Action buttons for notices */
+.notice .action-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.notice .action-buttons .button {
+    font-size: 12px;
+    height: auto;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+/* Smooth transitions for all interactive elements */
+.button, .nav-tab, input[type="checkbox"], input[type="radio"], select {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Filter toggle button */
+.filter-toggle {
+    margin-bottom: 15px;
+}
+
+/* Settings sections highlighting */
+.form-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+/* Field focus effect */
+.form-table input:focus + label,
+.form-table select:focus + label,
+.form-table textarea:focus + label {
+    color: var(--sfs-primary-color);
+    font-weight: 500;
+}
+
+/* Footer styles */
+.sfs-admin-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--sfs-border-color);
+    color: #666;
+    font-size: 13px;
+    text-align: center;
+}
+
+.sfs-admin-footer a {
+    color: var(--sfs-primary-color);
+    text-decoration: none;
+}
+
+.sfs-admin-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Tooltip styles */
+.sfs-tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+    cursor: help;
+}
+
+.sfs-tooltip .dashicons {
+    color: #999;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.sfs-tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.4;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.sfs-tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.sfs-tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+} 

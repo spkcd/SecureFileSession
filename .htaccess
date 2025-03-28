@@ -1,0 +1,30 @@
+# Secure File Session Plugin Rewrite Rules
+#<IfModule mod_rewrite.c>
+#    RewriteEngine On
+#    
+#    # Handle secure file requests
+#    RewriteCond %{QUERY_STRING} (^|&)sfs_file=([^&]+)(&|$) [NC]
+#    RewriteCond %{QUERY_STRING} (^|&)sfs_token=([^&]+)(&|$) [NC]
+#    RewriteRule ^(.*)$ /wp-content/plugins/secure-file-session/includes/direct-access.php [L]
+#</IfModule>
+
+# Protect plugin files from direct access
+#<Files ~ "\.php$">
+#    # Allow direct-access.php
+#    <FilesMatch "direct-access\.php$">
+#        Order allow,deny
+#        Allow from all
+#    </FilesMatch>
+#    
+#    # Deny all other PHP files
+#    <FilesMatch "^(?!direct-access\.php)">
+#        Order deny,allow
+#        Deny from all
+#    </FilesMatch>
+#</Files>
+
+# Deny access to sensitive files
+<FilesMatch "^(\.htaccess|\.git|composer\.(json|lock))">
+    Order deny,allow
+    Deny from all
+</FilesMatch> 

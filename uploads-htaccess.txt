@@ -1,0 +1,33 @@
+# Allow direct access to all files in the uploads directory
+<IfModule mod_authz_core.c>
+  # Apache 2.4+
+  Require all granted
+</IfModule>
+<IfModule !mod_authz_core.c>
+  # Apache 2.2 and earlier
+  Order allow,deny
+  Allow from all
+</IfModule>
+
+# Disable any potential blocking rules
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # SVG files - explicitly allow
+  <Files ~ "\.svg$">
+    Require all granted
+    Allow from all
+  </Files>
+  
+  # PNG files - explicitly allow
+  <Files ~ "\.png$">
+    Require all granted
+    Allow from all
+  </Files>
+
+  # JPEG files - explicitly allow
+  <Files ~ "\.(jpg|jpeg)$">
+    Require all granted
+    Allow from all
+  </Files>
+</IfModule> 
