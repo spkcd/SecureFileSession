@@ -107,4 +107,4 @@ The plugin is optimized for performance and should have minimal impact on your s
 
 ## Credits
 
-Developed by [Your Name/Company] 
+Developed by SPARKWEB Studio | www.sparkwebstudio.com
